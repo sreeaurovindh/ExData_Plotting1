@@ -8,7 +8,7 @@ dataset<-home[home[,1]>='2007-02-01' & home[,1] <= '2007-02-02',]
 # Convert the global active power to numeric
 dataset[,"Global_active_power"]<- as.numeric(dataset[,"Global_active_power"])
 # Open the png image
-png("plot1.png",width=480,height=480)
+png("plot1.png",width=480,height=480,bg="transparent")
 # Draw the histogram
 hist(dataset$Global_active_power*2/1000,,main="Global Active Power",col="red",xlab="Global Active Power (kilowatts)",ylim=c(0,1200))
 #  Write to the PNG file
